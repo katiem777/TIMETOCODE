@@ -1,0 +1,22 @@
+# HTTP status codes program
+
+# -------------------------
+# Subprograms
+# -------------------------
+# errors
+def http_status(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 401 | 403 :
+            return "Authentication error"
+        case 404:
+            return "Not found"
+        case _:
+            return "Unknown error"
+
+# -------------------------
+# Main program
+# -------------------------
+code = 400
+print(http_status(code))
