@@ -1,0 +1,55 @@
+# Exam grade program
+
+# -------------------------
+# Subprograms
+# ------------------------
+
+def grade(mark):
+    if mark<2:
+        return "U"
+    elif 2<mark<4:
+        return 1
+    elif 4<mark<13:
+        return 2
+    elif 13<mark<22:
+        return 3
+    elif 22<mark<31:
+        return 4
+    elif 31<mark<41:
+        return 5
+    elif 41<mark<54:
+        return 6
+    elif 54<mark<67:
+        return 7
+    elif 67<mark<80:
+        return 8
+    else:
+        return 9
+    
+def marks_needed(mark):
+        if grade(mark) == "U":
+            return 2 - mark
+        elif grade(mark) == 1:
+            return 4 - mark
+        elif grade(mark) == 2:
+            return 13 - mark
+        elif grade(mark) == 3:
+            return 22 - mark
+        elif grade(mark) == 4:
+            return 31 - mark
+        elif grade(mark) == 5:
+            return 41 - mark
+        elif grade(mark) == 6:
+            return 54 - mark
+        elif grade(mark) == 7:
+            return 67 - mark
+        elif grade(mark) == 8:
+            return 80 - mark
+        else:
+            return "0"
+# -------------------------
+# Main program
+# -------------------------
+mark = int(input("Enter the mark 0-100: "))
+print("A mark of",mark,"is grade",grade(mark))
+print("You need",marks_needed(mark), "more marks to achive the next grade.")
