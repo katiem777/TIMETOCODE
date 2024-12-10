@@ -1,0 +1,55 @@
+# Periodic table program
+
+# -------------------------
+# Subprograms
+# -------------------------
+#atomic weight of elements
+def periodic_table(symbol_name):
+    match symbol_name:
+        case "Lithium" | "Li":
+            return "6.94" 
+        case "Sodium" | "Na":
+            return "22.99" 
+        case "Potassium" | "K":
+            return "39.098" 
+        case "Fluorine" | "F":
+            return "18.998" 
+        case "Chlorine" | "Cl":
+            return "35.45" 
+        case "Bromine" | "Br":
+            return "79.904" 
+        case _:
+            return " "
+#group type of elements
+def table_group(symbol_name):
+    match symbol_name:
+        case "Lithium" | "Li" | "Sodium" | "Na" | "Potassium" | "K":
+            return "Alkali metals"
+        case "Chlorine" | "Cl" | "Bromine" | "Br" | "Fluorie" | "F":
+            return "Halogens"
+        case _:
+            return " "
+#elements
+def elements_name(symbol_name):
+    match symbol_name:
+        case "Lithium" | "Li":
+            return "Lithium"
+        case "Sodium" | "Na":
+            return "Sodium"
+        case "Potassium" | "K":
+            return "Potassium"
+        case "Fluorine" | "F":
+            return "Fluorine"
+        case "Chlorine" | "Cl":
+            return "Chlorine"
+        case "Bromine" | "Br":
+            return "Bromine"
+        case _:
+            return " "
+# -------------------------
+# Main program
+# -------------------------
+symbol_name = input("Enter the symbol or name of an element: ")
+print("Element: ", elements_name(symbol_name))
+print("Atomic weight: ", periodic_table(symbol_name))
+print("Group: ", table_group(symbol_name))
