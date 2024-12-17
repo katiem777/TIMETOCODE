@@ -1,0 +1,57 @@
+# This program will generate lyrics for a personalised Jingle Bells carol.
+
+# ----------------
+# Constants
+# ----------------
+
+BELL_ASCII_ART = """			   			  		
+				   _,--._
+                                 ,'  _.._`.
+                            ,^.,' ,-" _," ;
+                   _,----.._\\|( _/,--"  ,<
+                 ,'     ____(_))< ___..".  `.
+                :  _,-"__,-" (_)-.      ,\\.  \
+                :,'..-"  _,-")|(\\ `._.-"_,\\  \
+                 `.__ ,-"    '-`'   \\.-"   Y  :
+                 /  /:-...______...-:      |  |
+                (  ( |-...______...-'      ;  ;_
+                 \\ ,\\|              |     /,^/  ;._
+                  `  .              .        _,'   ;
+                     :              :    _,-'    ,"
+                     '              ` ,-'     _,"
+                    '                '    _,-"`.
+                   ;`--...______,,,--":.-"     ;
+                  :                    :  `..."
+                  '---....______,,,,---'
+                           :     ;
+                            `.,."          
+"""
+
+# ----------------
+# Subprograms
+# ----------------
+def generate_lyrics(noun, animal, place_plural, verb):
+    carol = "\n\n\nJingle bells, jingle bells, jingle all the way!\n"
+    carol += f"Dashing through the {noun}\n" 
+    carol += f"On a one-{animal}-open-sleigh\n" 
+    carol += f"O'er the {place_plural} we go\n" 
+    carol += f"{verb} all the way.\n"
+    
+    return carol
+    
+ 
+
+
+# ----------------
+# Main program
+# ----------------
+print(BELL_ASCII_ART)
+print("Welcome!")
+
+noun = input("Enter a noun: ")
+animal = input("Enter an animal: ") 
+place_plural = input("Enter a place: ")
+verb = input("Enter a verb ending in -ing: ")
+
+song_lyrics = generate_lyrics(noun, animal, place_plural, verb)
+print(song_lyrics)
