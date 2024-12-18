@@ -1,0 +1,36 @@
+# Rudolph's Adventure Story
+# A festive choose-your-own-adventure-style game, where players must make the right decisions so that Rudolph can deliver all of the presents on time! 
+
+# ----------------
+# Constants
+# ----------------
+ASCII_ART = '''
+         { }
+         {^^,
+         (   `-;
+    _     `;;~~
+   /(______);
+  (         (
+   |:------( )
+ _//         \\
+/ /          vv
+'''
+
+# ----------------
+# Subprograms
+# ----------------
+def game():
+    print("Welcome to Rudolph's Adventure, a choose-your-own-adventure\n game.""\nIt's Christmas Eve, and Rudolph needs to deliver all of the\n presents on time for Christmas!")
+    decision_one = input("Rudolph starts at Santa's Workshop. He needs to choose between taking a shortcut through the snowy mountains or following the longer, safer path through the valley. (shortcut/valley): ")
+    if decision_one == "shortcut":
+        return "Rudolph gets caught in a snowstorm and loses his way. Game over."
+        else:
+            return "Rudolph reaches the valley and continues his journey…" 
+        if decision_one == "valley":
+            decision_two = input("A blizzard hits, and Rudolph faces a choice: should he try to fly above the storm or find shelter in a cave? (cave/fly): ")
+    decision_three = input("Rudolph arrives at the first house to deliver presents. He faces a decision: should he use the chimney to deliver the presents or attempt to open the locked front door? (chimney/door): ")
+    decision_four = input("Rudolph is running out of time. He faces a decision: should he push through exhaustion to complete the deliveries or take a quick nap to regain energy? (push/nap):")
+# ----------------
+# Main program
+# ----------------
+print(ASCII_ART)
